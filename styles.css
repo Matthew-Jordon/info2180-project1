@@ -1,11 +1,168 @@
-/* Add your CSS to this file */
 body {
     margin: 0;
     font-size: 16px;
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'overview'
+    'learn'
+    'testing'
+    'stories'
+    'newsletter'
+    'footer';
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
 }
+
 
 .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
 }
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header {
+    grid-area: header;
+    background-color: white;
+}
+
+nav li {
+    display: inline;
+    padding: 5px;
+}
+nav a {color: #6b7280;}
+nav a:hover {color: #5a67d8;}
+
+.overview-hero {
+    grid-area: overview;
+    padding: 50px;
+    background-color: #e2e8f0;
+    margin: auto;
+}
+.overview-hero-image {
+    padding-right: 40px;
+    padding: 20px;
+    margin: auto;
+}
+.overview-hero-image img {
+    float: left;
+    height: 150px;
+    width: 150px;
+    padding: 30px;
+    padding-right: 50px;
+}
+
+.learn-about {
+    grid-area: learn;
+    padding: 20px;
+}
+.learn-about h2 {
+    font-size: 24px;
+    color: #48bb78;
+}
+
+.cards {
+    display: grid;
+    grid-template-areas: 'card1 card2 card3';
+}
+.cards img {
+    width: 200px;
+    height: 150px;
+}
+
+.card {
+    border-style: solid;
+    padding: 20px;
+    border-color: #e2e8f0;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px gray;
+}
+.card h3 {
+    font-size: 21px;
+    color: #48bb78;
+}
+.cards :nth-child(1) {
+    grid-area: card1;
+    padding: 10px;
+}
+
+.cards :nth-child(2) {
+    grid-area: card2;
+}
+
+.cards :nth-child(3) {
+    grid-area: card3;
+}
+
+.testing .container {
+    display: flex;
+    align-items: center;
+}
+.testing {
+    grid-area: testing;
+    background-color: #4a5568;
+    color: white;
+    padding: 50px;
+}
+.testing-desciption{
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+.cta {
+    float: right;
+    padding: 15px;
+    margin-right: 100px;
+    background-color: #48bb78;
+    width: 250px;
+}
+.cta a {color: white;}
+
+.stories {
+    grid-area: stories;
+    padding: 20px;
+    margin-left: 50px;
+}
+.stories h2, .stories a {color: #48bb78;}
+.stories img {
+    width: 155px;
+    height: 155px;
+    float: left;
+    border-radius: 50%;
+    padding: 20px;
+}
+article {padding: 20px;}
+
+.newsletter {background-color: #48bb78;}
+.newsletter .container {
+    grid-area: newsletter;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+form {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.newsletter .btn {
+    background-color: #5a67d8;
+    color: white;
+    height: 30px;
+    width: 100px;
+}
+.form-group {
+    padding-right: 5px;
+}
+input {
+    height: 25px;
+}
+
+footer {grid-area: footer;}
