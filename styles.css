@@ -164,5 +164,12 @@ form {
 input {
     height: 25px;
 }
+.message {
+    height: 30px;
+    width: 300px;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+}
 
 footer {grid-area: footer;}
